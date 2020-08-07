@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Object Model</title>
+	</head>
+	<body>
+		<h1>Document Object Model</h1>
+		<section>
+			<article>
+				<h2>Heading-1</h2>
+				<p class="author">Author-1</p>
+				<p class="description">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+					delectus enim, architecto nisi quam tenetur quasi voluptas dolores
+					voluptatibus, id quae dolore maxime, porro quidem natus minima
+					incidunt sunt nam?
+				</p>
+			</article>
+			<article>
+				<h2>Heading-2</h2>
+				<p class="author">Author-2</p>
+				<p class="description">
+					Nisi, esse ducimus! Obcaecati ratione doloremque ullam alias maxime
+					perspiciatis quae odio cupiditate sit deserunt neque hic quam nulla
+					maiores quod pariatur esse atque libero qui, ab vitae! At, asperiores.
+				</p>
+			</article>
+			<article>
+				<h2>Heading-3</h2>
+				<p class="author">Author-3</p>
+				<p class="description">
+					Perspiciatis temporibus doloribus iste corrupti dolores vel minima
+					dolor inventore dolorem assumenda. Qui voluptates reiciendis possimus,
+					quis est error suscipit dicta facilis consequatur, itaque odit rem
+					mollitia consectetur vitae perspiciatis?
+				</p>
+			</article>
+		</section>
+
+		<script>
+			var authors = document.getElementsByClassName("author");
+
+			for (var i = 0; i < authors.length; i++) {
+				var element = authors[i];
+				element.innerHTML = "Lekhok - " + (i + 1);
+				element.style.backgroundColor = "lightblue";
+				element.style.margin = "5px";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<div id="container">
+			<ul id="list">
+				<li id="first" class="item">List-1</li>
+				<li class="item">List-2</li>
+				<li class="item">List-3</li>
+				<li class="item">List-4</li>
+				<li id="last" class="item">List-5</li>
+			</ul>
+			<button id="addNew">Add New</button>
+		</div>
+
+		<script>
+			let addNew = document.getElementById("addNew");
+
+			addNew.addEventListener("click", function () {
+				let ul = document.getElementById("list");
+				let li = document.createElement("li");
+				li.innerText = "New Item";
+				ul.appendChild(li);
+			});
+
+			document
+				.getElementById("list")
+				.addEventListener("click", function (event) {
+					event.target.parentNode.removeChild(event.target);
+				});
+		</script>
+	</body>
+</html>

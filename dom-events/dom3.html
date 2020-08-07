@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>QuerySelector</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<article id="first">
+					<h1>Heading-1</h1>
+					<p class="author">Author-1</p>
+					<p class="description">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+						temporibus aliquam dignissimos eveniet nostrum placeat dicta nam
+						vitae aut cumque eius repellendus quae, facilis architecto possimus,
+						exercitationem labore quibusdam sit?
+					</p>
+				</article>
+				<article class="special">
+					<h1>Heading-2</h1>
+					<p class="author">Author-2</p>
+					<p class="description">
+						Rem, tenetur ut? Iusto minima id temporibus obcaecati maiores,
+						soluta odio voluptatum aspernatur doloremque eaque fugit. Enim atque
+						sapiente aliquam, quis a magnam quibusdam deleniti quasi quae ipsam
+						velit cum.
+					</p>
+				</article>
+				<article class="special">
+					<h1>Heading-3</h1>
+					<p class="author">Author-3</p>
+					<p class="description">
+						Doloribus quidem, animi atque qui, consequatur mollitia iusto eius,
+						dicta quisquam earum fugit neque similique quis sit reiciendis
+						recusandae voluptates eveniet quo ipsam iste accusantium sunt
+						sapiente? Quia, recusandae excepturi?
+					</p>
+				</article>
+				<article>
+					<h1>Heading-4</h1>
+					<p class="author">Author-4</p>
+					<p class="description">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+						temporibus aliquam dignissimos eveniet nostrum placeat dicta nam
+						vitae aut cumque eius repellendus quae, facilis architecto possimus,
+						exercitationem labore quibusdam sit?
+					</p>
+				</article>
+			</section>
+
+			<article id="grocery">
+				<h3>Grocery List</h3>
+				<ul id="list">
+					<li>List-1</li>
+					<li>List-2</li>
+					<li>List-3</li>
+					<li>List-4</li>
+					<li>List-5</li>
+				</ul>
+			</article>
+		</main>
+
+		<script>
+			var article = document.getElementById("first");
+			var newParagraph = document.createElement("p");
+			newParagraph.innerHTML = "This is added by JavaScript";
+			article.appendChild(newParagraph);
+
+			var ul = document.querySelector("#grocery ul");
+			const newList = document.createElement("li");
+			newList.innerHTML = "New List Item";
+			ul.appendChild(newList);
+		</script>
+	</body>
+</html>

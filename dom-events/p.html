@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<article class="special" id="first-article">
+					<h1 class="author">Author - 1</h1>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+						mollitia eveniet error rerum doloribus temporibus eligendi cum amet
+						eaque quidem?
+					</p>
+				</article>
+				<article>
+					<h1 class="author">Author - 2</h1>
+					<p class="description">
+						Amet doloremque debitis est, ex dicta ipsam, corrupti eos velit
+						harum, quidem esse explicabo adipisci dolor similique? Similique,
+						corrupti ea.
+					</p>
+				</article>
+				<article class="special">
+					<h1 class="author">Author - 3</h1>
+					<p class="description" id="desc" title="Hello Author">
+						Aperiam ex ipsa cum quia, reprehenderit laudantium vitae quas
+						maiores porro nisi autem tempore, nemo impedit molestias inventore
+						enim voluptatibus!
+					</p>
+				</article>
+				<article>
+					<h3>Grocery Lists</h3>
+					<ul id="grocery-list">
+						<li>List- 1</li>
+						<li>List- 2</li>
+						<li>List- 3</li>
+						<li>List- 4</li>
+						<li>List- 5</li>
+					</ul>
+				</article>
+			</section>
+		</main>
+
+		<script>
+			document.body.style.backgroundColor = "lightcoral";
+			let authors = document.querySelectorAll(".special h1");
+
+			for (let i = 0; i < authors.length; i++) {
+				let element = authors[i];
+				element.innerHTML = "Lekhok - " + (i + 1);
+				element.style.backgroundColor = "lightcyan";
+				element.setAttribute("title", "Best Author");
+				element.style.color = "tomato";
+				element.style.padding = "5px";
+				element.style.margin = "5px";
+			}
+
+			const article = document.getElementById("first-article");
+			const newElement = document.createElement("p");
+			newElement.innerHTML = "lorem ipsum dolor sit amet";
+			article.appendChild(newElement);
+
+			const ul = document.getElementById("grocery-list");
+			const li = document.createElement("li");
+			li.innerHTML = "New List Item";
+			ul.appendChild(li);
+		</script>
+	</body>
+</html>

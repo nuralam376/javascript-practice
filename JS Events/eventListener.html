@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event Listener</title>
+	</head>
+	<body>
+		<h1>Event Listener</h1>
+		<button>Button - 1</button>
+		<button>Button - 2</button>
+		<button id="third-btn">Button - 3</button>
+		<button>Button - 4</button>
+		<button id="last-btn">Button - 5</button>
+
+		<script>
+			function handleClick() {
+				document.body.style.color = "tomato";
+			}
+			const btn = document.getElementById("third-btn");
+			// btn.onclick = function () {
+			// 	document.body.style.backgroundColor = "cyan";
+			// };
+
+			// btn.addEventListener("click", handleClick);
+			document
+				.getElementById("last-btn")
+				.addEventListener("click", handleClick);
+		</script>
+	</body>
+</html>

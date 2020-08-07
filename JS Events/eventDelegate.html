@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event Delegate</title>
+	</head>
+	<body>
+		<div id="container">
+			<ul id="my-list">
+				<li class="item">Item-1</li>
+				<li class="item">Item-2</li>
+				<li class="item">Item-3</li>
+				<li class="item">Item-4</li>
+				<li class="item">Item-5</li>
+			</ul>
+			<button id="btn">Add New</button>
+		</div>
+
+		<script>
+			// var items = document.getElementsByClassName("item");
+
+			// for (let i = 0; i < items.length; i++) {
+			// 	let element = items[i];
+			// 	element.addEventListener("click", function (event) {
+			// 		event.target.parentNode.removeChild(event.target);
+			// 	});
+			// }
+
+			document
+				.getElementById("btn")
+				.addEventListener("click", function (event) {
+					const list = document.getElementById("my-list");
+					const newItem = document.createElement("li");
+					newItem.innerHTML = "New Brand Node";
+					list.append(newItem);
+				});
+
+			document
+				.getElementById("my-list")
+				.addEventListener("click", function (event) {
+					event.target.parentNode.removeChild(event.target);
+				});
+		</script>
+	</body>
+</html>

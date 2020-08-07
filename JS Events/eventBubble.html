@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event Bubble</title>
+	</head>
+	<body>
+		<div id="container">
+			<ul id="my-list">
+				<li id="first-list" class="item">Item-1</li>
+				<li class="item">Item-2</li>
+				<li class="item">Item-3</li>
+				<li class="item">Item-4</li>
+				<li class="item">Item-5</li>
+			</ul>
+		</div>
+
+		<script>
+			document
+				.getElementById("first-list")
+				.addEventListener("click", function () {
+					console.log("First item is clicked");
+					event.stopPropagation();
+				});
+
+			document.getElementById("my-list").addEventListener("click", function () {
+				console.log("List is clicked");
+				event.stopImmediatePropagation();
+			});
+
+			document
+				.getElementById("container")
+				.addEventListener("click", function () {
+					console.log("Container is clicked");
+				});
+		</script>
+	</body>
+</html>
