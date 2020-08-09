@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>This</title>
+	</head>
+	<body>
+		<h1>JavaScript "This"</h1>
+		<button onclick="handleClick(this)">This</button>
+		<script>
+			const person = {
+				name: "Abc",
+				getFullName: function () {
+					console.log(this);
+					return "Mr. " + this.name;
+				},
+			};
+
+			const member = {
+				name: "Def",
+			};
+
+			member.getFullName = person.getFullName;
+
+			console.log(person.getFullName());
+			console.log(member.getFullName());
+
+			function add() {
+				console.log(this);
+			}
+
+			member.sum = add;
+			member.sum();
+
+			function handleClick() {
+				console.log(this);
+			}
+
+			setTimeout(() => {
+				console.log(this);
+			}, 1000);
+		</script>
+	</body>
+</html>

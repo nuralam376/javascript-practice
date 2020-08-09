@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Async Await</title>
+	</head>
+	<body>
+		<ul id="list"></ul>
+
+		<script>
+			async function loadData() {
+				const response = await fetch(
+					"http://jsonplaceholder.typicode.com/users"
+				);
+				const data = await response.json();
+				await displayData(data);
+			}
+
+			loadData();
+
+			async function displayData(users) {
+				const list = document.getElementById("list");
+
+				for (let i = 0; i < users.length; i++) {
+					const user = users[i];
+					const item = document.createElement("li");
+					item.innerText = user.name;
+					list.appendChild(item);
+				}
+			}
+
+			async function add() {
+				return 2 + 3;
+			}
+
+			add().then((data) => console.log(data));
+		</script>
+	</body>
+</html>
