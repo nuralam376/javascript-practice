@@ -70,3 +70,23 @@ console.log(result); // r
 
 result = line2.replace("rld", "Hello");
 console.log(result); // WoHello
+
+// Template Literal
+console.log("First Line\nSecond Line"); // First Line
+//Second Line
+
+console.log(`First Line
+Second Line 
+`);
+
+// First Line
+// Second Line
+
+const a = 5;
+const b = 6;
+console.log(`${a} + ${b} = ${a + b}`); // 5 + 6 = 11
+
+let name = "Abc";
+let age = 29;
+
+console.log(`Name = ${name} and age = ${age}`); // Name = Abc and age = 29
