@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bored API</title>
+	</head>
+	<body>
+		<h1 id="activity">Fetching Activity.....</h1>
+	</body>
+
+	<script>
+		function showTask(data) {
+			document.getElementById("activity").innerHTML = data.activity;
+		}
+
+		function fetchTask() {
+			fetch("https://www.boredapi.com/api/activity")
+				.then((response) => response.json())
+				.then((json) => showTask(json));
+		}
+
+		setInterval(() => {
+			fetchTask();
+		}, 5000);
+	</script>
+</html>

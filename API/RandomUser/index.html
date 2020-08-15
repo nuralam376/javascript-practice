@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random User</title>
+	</head>
+	<body>
+		<h1 id="name">Fetching Data....</h1>
+
+		<script>
+			function showUser(user) {
+				const name = user.results[0].name;
+				const fullName = `${name.title} ${name.first} ${name.last}`;
+				document.getElementById("name").innerHTML = fullName;
+			}
+
+			function fetchUser() {
+				fetch("https://randomuser.me/api/")
+					.then((response) => response.json())
+					.then((json) => showUser(json));
+			}
+
+			setInterval(fetchUser, 5000);
+		</script>
+	</body>
+</html>
