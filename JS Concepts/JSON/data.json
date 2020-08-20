@@ -1,0 +1,7 @@
+{
+	"persons": [
+		{ "name": "Abc", "age": "29", "salary": 29000 },
+		{ "name": "Def", "age": 30, "salary": 30000 },
+		{ "name": "Ghi", "age": 35, "salary": 40000 }
+	]
+}
