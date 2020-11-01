@@ -1,1 +1,1 @@
-# javascript-practice
+# Javascript Practice from  different resources
