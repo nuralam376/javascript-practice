@@ -4,7 +4,7 @@ class Person {
     this.age = age;
   }
 
-  eat() {
+  play() {
     console.log(`${this.name} is eating`);
   }
 }
@@ -17,16 +17,17 @@ class Cricketer extends Person {
   }
 
   play() {
+    super.play();
     console.log(`${this.name} is playing`);
   }
 }
 
 const abc = new Cricketer("Abc", 25, "Cricketer", "BD");
-abc.eat();
+// abc.eat();
 abc.play();
 
 const def = new Person("Def", 35);
-def.eat();
+// def.eat();
 // def.play();
 
 console.dir(abc);
