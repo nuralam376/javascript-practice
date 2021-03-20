@@ -37,7 +37,7 @@ for (element of object) {
 function* generator(obj) {
   let entries = Object.entries(obj);
 
-  for (element of entries) {
+  for (let element of entries) {
     yield element[1];
   }
 }
